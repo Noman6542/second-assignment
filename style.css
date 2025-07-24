@@ -1,12 +1,22 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+section{
+  margin-bottom: 120px;
+}
+body{
+  background-color: #F5F8FF;
 }
 .container{
   max-width: 1440px;
   margin: 0 auto;
-  background-color: #F5F8FF;
-
+  margin-bottom: 120px;
+}
+footer{
+   max-width: 1440px;
+  margin: 0 auto;
 }
 /* header style */
 .parents{
@@ -43,4 +53,234 @@
 .logo{
   max-width: 135px;
   max-height: 80px;
+}
+
+
+
+/* FRESH style*/
+.FRESH{
+  display: flex;
+  align-items: end;
+}
+.fresh-title{
+  gap: 13px;
+}
+.title-h{
+   font-family: "Noto Serif", serif;
+  font-weight:bold;
+  font-size: 65px;
+}
+.red{
+  color: #E95A08;
+}
+.title-des{
+  font-size: 22px;
+  color:rgba(0, 0, 0, 0.5);
+}
+.fresh-img img{
+  max-width: 570px;
+  max-height: 355px;
+}
+.plant-title{
+  text-align: center;
+}
+.plant-title{
+   font-family: "Noto Serif", serif;
+  font-weight:bold;
+  font-size: 50px;
+}
+.plan-p{
+  margin-top: 16px;
+  margin-bottom: 50px;
+  
+  
+}
+/* card style */
+.card{
+  text-align: center;
+}
+.card img{
+  margin-bottom: 30px;
+}
+.card .p{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.p2{
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.card button{
+  padding: 20px 80px;
+  background-color: #E95A08;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+}
+.cards{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+/* challenge style */
+.challanges{
+  display: flex;
+  gap: 60px;
+}
+.img-section{
+  position: relative;
+}
+.badge{
+  position: absolute;
+  top:-110px;
+  right:-100px;
+ width: 285px;
+height: 285px;
+box-shadow: rgba(0, 0, 0, 0.25);
+}
+.text-section{
+  padding: 38px 0 38px 60px;
+
+}
+.challeng-title{
+ font-family: "Noto Serif", serif;
+  font-weight:bold;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.text-section ul{
+gap:20px;
+}
+.text-section li{
+  font-size: 22px;
+  font-family: "Inter", serif;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+/* deal style */
+.deal{
+  text-align: center;
+}
+.deal-title{
+  margin-bottom: 16px;
+font-family: "Noto Serif", serif;
+  font-weight:bold;
+  font-size: 50px;
+}
+.Latest{
+  color: #E95A08;
+}
+.deal-des{
+font-family: "Inter", serif;
+font-size: 22px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.deal-img{
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 120px;
+}
+
+.second-img{
+flex: 1;
+ max-width: 50%;
+}
+.first-img{
+  max-width:25%;
+  gap: 30px;
+  flex: 1;
+}
+.img-title1{
+  background-image: url(./assets/deal-bloom.png);
+  color: white;
+  text-align: center;
+  padding: 65px 20px 50px 50px;
+}
+.img-title2{
+  background-image: url(./assets/deal-ana.png);
+  color: white;
+  text-align: center;
+  padding: 60px 50px;
+  
+}
+.second-img{
+  background-image: url(./assets/deal-zabo.png);
+  color: white;
+  text-align: center;
+  justify-items: center;
+}
+
+/* input style */
+.join{
+  background-image: url(./assets/news-letter-bg.png);
+  padding: 200px 305px 193px 305px;
+  text-align: center;
+  max-width: 1440px;
+
+}
+.join-title{
+  font-family: "Noto Serif", serif;
+  font-weight:bold;
+  font-size: 50px;
+  color: white;
+  margin-bottom: 23px;
+}
+.join input{
+  padding: 20px 8px;
+  
+}
+.parents{
+  margin: 50px 160px;
+}
+.f-nav ul{
+  list-style: none;
+  gap: 32px;
+  color: rgba(107, 114, 128, 1);
+}
+.f-nav li{
+ margin-bottom: 32px;
+}
+.icon{
+  align-items:start;
+}
+.logos{
+  align-items: start;
+}
+.logos .des{
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 22px;
+}
+/* responsive style */
+@media screen and (max-width:576px) {
+  .nav ul{
+    display: none;
+
+  }
+  .parents{
+    justify-content: space-between;
+  }
+  .FRESH{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .fresh-img img{
+    margin-bottom: 28px;
+    width:fit-content
+  }
+  .cards{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px;
+}
+.badge{
+  display: none;
+}
+.challanges{
+flex-direction:column;
+}
+
 }
