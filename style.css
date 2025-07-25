@@ -483,6 +483,7 @@ height: 275px;
 }
 .join input{
   width: 218px;
+  border: none;
 }
 .join button{
 width: 103px;
