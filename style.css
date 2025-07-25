@@ -336,6 +336,13 @@ flex: 1;
 }
 /* responsive style */
 @media screen and (max-width:576px) {
+
+  
+  .container{
+    margin-bottom: 30px;
+  }
+
+
   .nav ul{
     display: none;
 
@@ -347,6 +354,11 @@ flex: 1;
   .FRESH{
     display: flex;
     flex-direction: column-reverse;
+    margin: 0 auto;
+    
+  }
+  .fresh-title{
+    padding: 28px 16px 65px 16px;
   }
   .fresh-img img{
     margin-bottom: 28px;
@@ -372,13 +384,10 @@ flex: 1;
   .cards{
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  width: 362px;
+  width:100%;
+  padding: 28px 17px;
 }
-.card{
-  /* width:100%; */
-  padding:auto;
-  margin: none;
-}
+
 .card img{
   width: 171px;
 }
@@ -387,17 +396,24 @@ flex: 1;
 }
 .p2{
   font-size: 16px;
+  margin-bottom: ;
 }
-.btn{
+.card button{
+  padding: 0;
   width: 171px;
-  padding: 10px 20px;
   font-size: 16px;
+  height: 50px;
 }
+
 .badge{
   display: none;
 }
 .challanges{
 flex-direction:column;
+margin: 0 auto;
+}
+.img-section{
+  padding: 18px;
 }
 
 .img-main{
@@ -411,9 +427,11 @@ flex-direction:column;
 }
 .text-section{
   gap: 16px;
+  padding: 0 18px;
 }
 .text-section li{
   font-size: 14px;
+  margin-left: 18px;
 }
 .deal-title{
   font-size: 24px;
@@ -423,16 +441,39 @@ flex-direction:column;
 }
 .deal-img{
    display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
+.first-img{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 100%;
+    width: 100%;
+}
+.img-title2{
+  border-radius:0px !important;
+}
+
 .first-img div{
   display: flex;
   flex-direction: column;
   width: 361px;
   margin: 0 auto;
+  height: 197px;
+  align-items: center;
+
+
 }
+
 .second-img{
-  width: 361px;
+  width: 100%;
+  max-width: 100%;
+  height: 197px;
+  border-radius: 14px;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+
 }
 .join{
 height: 275px;
