@@ -10,7 +10,7 @@ body{
   background-color: #F5F8FF;
 }
 .container{
-  max-width: 1440px;
+  max-width: 1140px;
   margin: 0 auto;
   margin-bottom: 120px;
 }
@@ -90,11 +90,12 @@ footer{
   font-size: 50px;
 }
 .plan-p{
-  margin-top: 16px;
-  margin-bottom: 50px;
-  
-  
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    padding-top: 16px;
 }
+  
 /* card style */
 .card{
   text-align: center;
@@ -132,7 +133,15 @@ footer{
 }
 .img-section{
   position: relative;
+  flex-grow: 1;
 }
+.img-section .img-main{
+  
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 4;
+}
+
 .badge{
   position: absolute;
   top:-110px;
@@ -142,8 +151,8 @@ height: 285px;
 box-shadow: rgba(0, 0, 0, 0.25);
 }
 .text-section{
-  padding: 38px 0 38px 60px;
-
+ padding: 38px 0 38px 60px;
+ max-width: 500px;
 }
 .challeng-title{
  font-family: "Noto Serif", serif;
@@ -174,9 +183,11 @@ font-family: "Noto Serif", serif;
   color: #E95A08;
 }
 .deal-des{
-font-family: "Inter", serif;
-font-size: 22px;
+ font-family: "Inter", serif;
+ font-size: 22px;
   color: rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  margin: 0 auto;
 }
 .deal-img{
   display: flex;
@@ -189,10 +200,17 @@ font-size: 22px;
 flex: 1;
  max-width: 50%;
 }
-.first-img{
-  max-width:25%;
-  gap: 30px;
-  flex: 1;
+.first-img div{
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.first-img {
+  max-width: 25%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 .img-title1{
   background-image: url(./assets/deal-bloom.png);
@@ -207,21 +225,52 @@ flex: 1;
   padding: 60px 50px;
   
 }
+
+.deal-img button{
+  background: unset;
+  border: none;
+  border-bottom: 1px solid white !important;
+  color: white;
+}
 .second-img{
   background-image: url(./assets/deal-zabo.png);
   color: white;
   text-align: center;
   justify-items: center;
+  border-radius: 22px;
+  position: relative;
+  overflow: hidden;
 }
-
+.second-img:after, .first-img div:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: black;
+  opacity: 30%;
+  
+}
+.second-img h5, .second-img button, .first-img h5, .first-img button{
+  position: relative;
+  z-index: 9;
+}
+.second-img h5{
+  padding-top: 25%;
+}
 /* input style */
 .join{
   background-image: url(./assets/news-letter-bg.png);
-  padding: 200px 305px 193px 305px;
+  /* padding: 200px 305px 193px 305px; */
+  padding-top:200px ;
+  padding-bottom: 266px;
   text-align: center;
-  max-width: 1440px;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
+
 .join-title{
   font-family: "Noto Serif", serif;
   font-weight:bold;
@@ -231,11 +280,18 @@ flex: 1;
 }
 .join input{
   padding: 20px 8px;
+  width: 644px;
+  border: none;
   
 }
-.parents{
-  margin: 50px 160px;
+.join button{
+  padding: 20px 8px;
+  width: 186px;
+  color: white;
+  background-color: #E95A08;
+  border: none;
 }
+
 .f-nav ul{
   list-style: none;
   gap: 32px;
@@ -254,6 +310,30 @@ flex: 1;
   color: rgba(0, 0, 0, 0.5);
   font-size: 22px;
 }
+
+
+/* footer */
+.footer-wrapper{
+  display: grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:30px;
+
+
+}
+.logos{
+  min-width: 340px;
+}
+.icon{
+  display: flex;
+  gap: 24px;
+}
+.icon .twitter{
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  background: white;
+  border-radius: 50%;
+}
 /* responsive style */
 @media screen and (max-width:576px) {
   .nav ul{
@@ -262,6 +342,7 @@ flex: 1;
   }
   .parents{
     justify-content: space-between;
+    width:100%;
   }
   .FRESH{
     display: flex;
@@ -269,18 +350,108 @@ flex: 1;
   }
   .fresh-img img{
     margin-bottom: 28px;
-    width:fit-content
+    width:393px;
+    padding-left: px;
   }
+.title-h{
+  width: 361px;
+  font-size: 24px;
+}
+.title-des{
+  width: 360px;
+  font-size: 14px;
+  margin: 0 auto;
+}
+.title{
+  font-size: 24px;
+}
+.plan-p{
+  font-size: 14px;
+  width: 336px;
+}
   .cards{
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  gap: 30px;
+  width: 362px;
+}
+.card{
+  /* width:100%; */
+  padding:auto;
+  margin: none;
+}
+.card img{
+  width: 171px;
+}
+.p{
+  font-size: 16px;
+}
+.p2{
+  font-size: 16px;
+}
+.btn{
+  width: 171px;
+  padding: 10px 20px;
+  font-size: 16px;
 }
 .badge{
   display: none;
 }
 .challanges{
 flex-direction:column;
+}
+
+.img-main{
+  width: 358px;
+  height: 396px;
+  margin: 0 auto;
+}
+.challeng-title{
+  font-size: 24px;
+  width: 100%px;
+}
+.text-section{
+  gap: 16px;
+}
+.text-section li{
+  font-size: 14px;
+}
+.deal-title{
+  font-size: 24px;
+}
+.deal-des{
+  font-size: 14px;
+}
+.deal-img{
+   display: flex;
+  flex-direction: column;
+}
+.first-img div{
+  display: flex;
+  flex-direction: column;
+  width: 361px;
+  margin: 0 auto;
+}
+.second-img{
+  width: 361px;
+}
+.join{
+height: 275px;
+}
+.join-title{
+  font-size: 20px;
+}
+.join input{
+  width: 218px;
+}
+.join button{
+width: 103px;
+}
+
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap:20px;
+    padding: 10px;
 }
 
 }
